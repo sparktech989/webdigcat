@@ -1,0 +1,39 @@
+<?php
+/**
+ * @package Tnex-Themes
+ */
+get_header(); ?>
+<div class="container">
+    <div class="row content-row">
+        <div id="pxl-content-area" class="pxl-content-area col-12">
+            <main id="pxl-content-main">
+                <div class="pxl-error-inner">
+                    <div class="pxl-error-image"><img src="<?php echo esc_url(get_template_directory_uri().'/assets/img/404.png'); ?>" alt="<?php echo esc_attr__('404 Error', 'loraic'); ?>" /></div>
+                    <div class="pxl-error-holder">
+                        <div class="wrap-error-holder">
+                            <h3 class="pxl-error-title">
+                                <?php echo esc_html__('PAGE NOT FOUND', 'loraic'); ?>
+                            </h3>
+                            <div class="pxl-error-description"><?php echo esc_html__('Oops! The page you are looking for does not exist. It might have been moved or deleted.', 'loraic'); ?></div>
+                            <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url( '/' )); ?>">
+                                <div class="searchform-wrap">
+                                    <input type="text" placeholder="<?php esc_attr_e('Email Address...', 'loraic'); ?>" name="s" class="search-field" />
+                                    <button type="submit" class="search-submit" style="transform: scaleX(-1);"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.6265 2.37354C16.0441 0.79118 14.1375 0 11.9066 0C9.67575 0 7.76913 0.79118 6.18677 2.37354C4.60441 3.9559 3.81323 5.86252 3.81323 8.09338C3.81323 9.98703 4.40986 11.6861 5.60311 13.1907L0.272374 18.5214C0.0907912 18.677 0 18.8716 0 19.1051C0 19.3645 0.077821 19.572 0.233463 19.7276C0.415045 19.9092 0.622568 20 0.856031 20C1.11543 20 1.32296 19.9092 1.4786 19.7276L6.80934 14.3969C8.31388 15.5901 10.013 16.1868 11.9066 16.1868C14.1375 16.1868 16.0441 15.3956 17.6265 13.8132C19.2088 12.2309 20 10.3243 20 8.09338C20 5.86252 19.2088 3.9559 17.6265 2.37354ZM16.7315 12.9572C15.4086 14.2802 13.8003 14.9416 11.9066 14.9416C10.013 14.9416 8.3917 14.2802 7.0428 12.9572C5.71984 11.6083 5.05837 9.98703 5.05837 8.09338C5.05837 6.19974 5.71984 4.59144 7.0428 3.26848C8.3917 1.91958 10.013 1.24514 11.9066 1.24514C13.8003 1.24514 15.4086 1.91958 16.7315 3.26848C18.0804 4.59144 18.7549 6.19974 18.7549 8.09338C18.7549 9.98703 18.0804 11.6083 16.7315 12.9572Z" fill="#5A5C5E"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                        <a class="btn btn-primary" href="<?php echo esc_url(home_url('/')); ?>">
+                            <span>
+                                <?php echo esc_html__('Go Back Home', 'loraic'); ?>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</div>
+<?php get_footer();

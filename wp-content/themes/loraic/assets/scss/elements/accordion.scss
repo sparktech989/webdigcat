@@ -1,0 +1,116 @@
+.pxl-accordion {
+    .pxl-item--title {
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+    .pxl-item--content {
+        display: none;
+    }
+    .pxl-icon--plus {
+        font-style: normal;
+    }
+}
+
+.pxl-accordion1 {
+    .icon-plus {
+        position: relative;
+        width: 32px;
+        min-width: 32px;
+        height: 32px;
+        border-radius: 1000px;
+        background-color: #EEEEEE;
+        @include transition(all .25s cubic-bezier(.3,.3,0,.8));
+        &:before,&:after {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 2px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) !important;
+            @include transition(all .25s cubic-bezier(.3,.3,0,.8));
+            background-color: #fff;
+        }
+        &:after {
+            transform: translate(-50%, -50%) rotate(90deg) !important;
+        }
+    }
+    .pxl-title--icon {
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        border-radius: 1000px;
+        color: $secondary_color;
+        background-color: $primary_color;
+        display: inline-block;
+        text-align: center;
+        line-height: 16px;
+        @include transition(all .25s cubic-bezier(.3,.3,0,.8));
+        i {
+            font-size: 11px;
+        }
+    }
+    .pxl-item--title {
+        padding: 18px 15px 18px 35px;
+        box-shadow: 0px 4px 20px 0px rgba(180, 193, 208, 0.25);
+        color:  #1C3F39;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px; 
+        @include transition(all .25s cubic-bezier(.3,.3,0,.8));
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 20px;
+         @media (min-width: 576px) {
+        padding: 18px 15px 18px 35px;
+            border-radius: 1000px;
+        }
+    }
+    .pxl-item--content {
+        padding: 22px 30px 13px 38px;
+         @media (max-width: 575px) {
+            padding: 20px 20px 20px 20px;
+        }
+        color:  #505D7B;
+        font-family: "Inter",sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+    }
+    .pxl--item {
+        position: relative;
+        @include transition(all .25s cubic-bezier(.3,.3,0,.8));
+        +.pxl--item {
+            margin-top: 17px;
+        }
+        &:last-child{
+            border: none;
+            .pxl-item--title {
+                border-bottom: none;
+            }
+        }
+        &.active {
+            .pxl-item--title {
+                background-color: $four_color;
+                color:#fff;
+            }
+            .icon-plus {
+                background-color: $primary_color;
+                &:after {
+                    transform: translate(-50%, -50%) rotate(0deg) !important;
+                }
+                &:after,&:before {
+                    background-color: $secondary_color;
+                }
+            }
+        }
+    }
+}
+
+body.rtl {
+
+}

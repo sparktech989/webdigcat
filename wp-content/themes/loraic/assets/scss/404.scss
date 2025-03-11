@@ -1,0 +1,98 @@
+.error404 {
+	#pxl-main {
+		margin-top: 87px;
+		background-image: url(../img/bg-4040.png) !important;
+		background-repeat: no-repeat;
+		background-position: top center;
+		padding-top: 60px;
+		padding-bottom: 180px;
+		@media (max-width: 767px) {
+			margin-top: 0px;
+			padding-bottom: 70px;
+		}
+	}
+	.pxl-error-inner {
+		margin: 0 auto;
+		text-align: center;
+		.pxl-error-title {
+			margin-top: 22px;
+			margin-bottom: 22px;
+			font-weight: 600;
+			font-size: 48px;
+			text-transform: uppercase;
+			line-height: 56px;
+			color: $secondary_color;
+			@media #{$max-sm} {
+				font-size: 36px;
+			}
+		}
+		.pxl-error-description {
+			font-size: 18px;	
+			line-height: 28px;
+			margin-bottom: 72px;
+			@media (max-width: 767px) {
+				margin-bottom: 30px;
+			}
+		}
+		.pxl-error-image {
+			@media #{$max-lg} {
+				margin-top: 0px;
+			}
+			@media #{$max-sm} {
+				margin-top: 0px;
+			}
+		}
+		.searchform-wrap {
+			position: relative;
+			max-width: 723px;
+			margin: 0 auto;
+			input {
+				height: 58px;
+				background-color: #F5F8FD;
+				padding-left: 25px;
+				border: none;
+				border-radius: 6px;
+			}
+			button {
+				border-radius:  6px 0 0 6px;
+				position: absolute;
+				top:0;
+				right: 0;
+				width: 58px;
+				height: 58px;
+				background-color: $primary_color;
+				color: #fff;
+				svg path {
+					fill:#fff;
+				}
+				&:hover {
+					background-color: $secondary_color;
+				}
+			}
+		}
+		.pxl-error-holder {
+			position: relative;
+			z-index: 99;
+		}
+		.btn {
+			font-family: Inter;
+			@include border-radius(8px);
+			margin-top: 37px;
+			line-height: 60px;
+			text-transform: capitalize;
+			font-size: 16px;
+			font-weight: 600;
+			color: #F2F8FA;
+			background-color: $secondary_color;
+			span{
+				position: relative;
+				z-index: 3;
+			}
+			padding: 0 40px;
+			&:hover {
+				background-color: $primary_color;
+				color: $secondary_color;
+			}
+		}
+	}
+}

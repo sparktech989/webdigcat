@@ -1,0 +1,80 @@
+.pxl--progressbar {
+    @include transition(width 1.4s ease);
+    width: 0;
+    &.vertical {
+        @include transition(height 1.4s ease);
+        height: 0;
+    }
+}
+.pxl-progressbar-1 {
+    .pxl--progressbar {
+        height: 6px;
+        position: relative;
+        border-radius: 100px;
+        background-color: $primary_color;
+        top: 0;
+    }
+    .pxl--holder {
+        border-radius: 100px;
+        border: 1px solid #EEEEEE;
+        border-radius: 100px;
+        padding: 2px;
+        height: 12px;
+    }
+    .pxl--percentage {
+        font-size: 15px;
+        color: #0A0A0B;
+        font-weight: 600;
+        @extend .ft-theme-default;
+    }
+    .pxl--title {
+        font-weight: 600;
+        font-size: 16px;
+        flex-grow: 1;
+        margin-bottom: 0;
+    }
+    .pxl--meta {
+        margin-bottom: 5px;
+    }
+    .pxl--item {
+        + .pxl--item {
+            margin-top: 28px;
+        }
+    }
+}
+
+.pxl-progressbar-2 {
+    .pxl--progressbar {
+        border-radius: 100px;
+        height: 4px;
+        position: relative;
+        background-color: $primary_color;
+        top: 1px;
+        left:1px;
+    }
+    .pxl--holder {
+        border-radius: 100px;
+        border:1px solid $primary_color;
+        height: 8px;
+    }
+    .pxl--percentage {
+        font-size: 17px;
+        color: #0A0A0B;
+        font-weight: 600;
+        @extend .ft-theme-default;
+    }
+    .pxl--title {
+        font-weight: 600;
+        font-size: 17px;
+        flex-grow: 1;
+        margin-bottom: 0;
+    }
+    .pxl--meta {
+        margin-bottom: 5px;
+    }
+    .pxl--item {
+        + .pxl--item {
+            margin-top: 28px;
+        }
+    }
+}
